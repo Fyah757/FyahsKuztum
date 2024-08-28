@@ -1,12 +1,21 @@
 package com.perscholas.fyahskuztum.service;
 
+import com.perscholas.fyahskuztum.model.Role;
 import com.perscholas.fyahskuztum.model.User;
 
 import java.util.List;
 
 public interface UserService {
 
-    User findByEmail(String email);
     User saveUser(User user);
-// hi
+
+    Role saveRole(Role role);
+
+    void addRoleToUser(String username, String roleName);
+
+    User getUser(String username);
+
+    List<User> getUsers();
+
+    void saveUser(User user);
 }

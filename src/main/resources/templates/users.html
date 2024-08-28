@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+</head>
+<body>
+<h1>Users</h1>
+<ul>
+    <li th:each="user : ${users}">
+        <span th:text="${user.username}"></span> - <span th:text="${user.email}"></span>
+        <a th:href="@{/user(username=${user.username})}">Details</a>
+    </li>
+</ul>
+<a href="/user/register">Register New User</a>
+</body>
+</html>
